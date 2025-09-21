@@ -1,0 +1,41 @@
+# === Entornos virtuales ===
+env/
+venv/
+.venv/
+ENV/
+*.env
+
+# === Cachés de Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Archivos de configuración/compilación ===
+*.so
+*.dll
+*.dylib
+*.pyd
+*.log
+
+# === Archivos temporales del sistema ===
+.DS_Store
+Thumbs.db
+
+# === Archivos de IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Archivos de salida del proyecto ===
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+
+# === Datos grandes o sensibles ===
+*.wav
+*.mp3
+*.flac
+*.ogg
