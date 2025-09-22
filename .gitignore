@@ -27,12 +27,6 @@ Thumbs.db
 *.swp
 *.swo
 
-# === Archivos de salida del proyecto ===
-outputs/
-*.png
-*.jpg
-*.jpeg
-*.bmp
 
 # === Datos grandes o sensibles ===
 *.wav
