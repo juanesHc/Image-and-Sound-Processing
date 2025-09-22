@@ -36,23 +36,15 @@ def getDuration(audio, sr):
     return len(audio) / sr
 
 def getSpectrum(audio, sr):
-    """
-    Calcula y guarda el espectro de frecuencias de un audio.
-    - audio: señal de audio (numpy array)
-    - sr: sample rate (Hz)
-    - save_path: ruta del archivo de salida para la gráfica
-    """
-    # Aplicar FFT y obtener magnitudes
+
     N = len(audio)
     spectrum = np.fft.fft(audio)
     freqs = np.fft.fftfreq(N, d=1/sr)
 
-    # Quedarse solo con la mitad positiva del espectro
     mask = freqs >= 0
     freqs = freqs[mask]
     magnitude = np.abs(spectrum[mask])
 
-    # Graficar
     plt.figure(figsize=(8, 4))
     plt.plot(freqs, magnitude, color="purple")
     plt.title("Espectro de Frecuencias (FFT)")
@@ -62,22 +54,12 @@ def getSpectrum(audio, sr):
     plt.savefig("outputs/spectrum.png")
     plt.close()
 
-    # Devolver datos útiles para análisis adicional
     return freqs, magnitude
 
 def getSpectrogram(audio, sr, save_path="outputs/audio_spectrogram.png"):
-    """
-    Calcula y guarda el espectrograma (tiempo vs frecuencia) de un audio.
-    - audio: señal de audio (numpy array)
-    - sr: sample rate (Hz)
-    - save_path: ruta para guardar la imagen
-    """
-    # Calcular Short-Time Fourier Transform (STFT)
     stft = librosa.stft(audio)
-    # Convertir a escala de decibelios (para visualizar mejor)
     db_spectrogram = librosa.amplitude_to_db(np.abs(stft), ref=np.max)
 
-    # Graficar espectrograma
     plt.figure(figsize=(10, 4))
     librosa.display.specshow(
         db_spectrogram,
