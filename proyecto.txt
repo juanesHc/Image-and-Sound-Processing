@@ -1,0 +1,34 @@
+Objetivo
+En este proyecto, extraerás características de color de la imagen y características tímbricas/rítmicas del audio, para luego presentar un perfil artístico unificado (gráficos y una breve interpretación escrita) que conecte el sonido y los colores.
+Resultados del aprendizaje
+•Imagen: espacios de color (RGB/HSV), histogramas, colores dominantes (mediante k-medias o selección de picos del histograma).
+•Audio: energía RMS, centroide espectral (brillo), tempo/tasa de inicio, fundamentos del espectrograma mel.
+•Fusión: normalización de características heterogéneas, diseño de visualización claro, interpretación concisa.
+Herramientas sugeridas
+NumPy, Matplotlib, OpenCV/Pillow, Librosa, SoundFile o PyDub.
+Insumos
+•Una imagen (JPG/PNG).
+•Un clip de audio (15–45 s; se prefiere WAV). 
+Requisitos básicos
+
+1. Características de la imagen (al menos dos): colores dominantes (3-5) con valores RGB/HSV y muestras de color; y/o histogramas de color globales. YA
+2. Características de audio (al menos tres): energía RMS, centroide espectral, tempo o tasa de inicio; opcionalmente, energías limitadas por banda. YA
+1
+3. Fusión y visualización: una figura o panel que combine las características extraídas de ambos tipos de medios.
+4. Interpretación (máximo 200 palabras): relacionar la calidez/saturación del color con el brillo/energía tímbricos.
+Pasos sugeridos
+
+1. Cargar el medio; calcular histogramas y colores dominantes.
+2. Cargar el audio; calcular RMS, centroide espectral, tempo; calcular el espectrograma mel.
+3. Normalizar las características; diseñar una figura clara de múltiples paneles.
+4. Redactar la interpretación que conecte ambas modalidades.
+Entregables
+•Un video explicativo del proyecto y los resultados. •Un informe en formato PDF (subido por separado a través de Moodle).
+•Todo el código, los archivos multimedia y los resultados se comprimen en una sola carpeta.
+Rúbrica (100 pts)
+Extracción correcta de características (imagen y audio) 35
+Visualizaciones claras y bien etiquetadas 20
+Normalización y fusión sensatas 15
+Calidad de la interpretación (basada en la evidencia) 10
+Explicación en video 20
+2

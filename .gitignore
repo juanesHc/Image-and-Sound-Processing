@@ -39,3 +39,6 @@ outputs/
 *.mp3
 *.flac
 *.ogg
+
+# === Otros archivos específicos del proyecto ===
+.txt
